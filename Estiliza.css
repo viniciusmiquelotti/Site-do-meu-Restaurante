@@ -1,0 +1,45 @@
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .animated-list {
+    margin-top: 20px;
+  }
+  
+  .animated-item {
+    font-weight: bold;
+    animation: shake 0.5s ease-in-out infinite;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px) rotate(-5deg);
+    }
+    75% {
+      transform: translateX(5px) rotate(5deg);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  #description {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  

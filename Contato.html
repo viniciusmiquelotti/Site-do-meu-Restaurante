@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Personalizado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="Cards.css">
+    <link rel="stylesheet" type="text/css" href="Estilo dos contats.css"/>
+    <script src="slide.js"></script>
+
+</head>
+<body>
+<header>
+</head>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <img src="img/logo.png" alt="Logo" class="logo-img">
+                </a>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Chefes.html">Chefes</a></li>
+                    <li><a href="Contato.html">Contato</a></li>
+                    <li><a href="Convidados.html">Lista de Convidados</a></li>
+                </ul>
+            </nav>
+
+            <div class="redes-sociais">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+     
+   <div>
+    
+      <title>Página de Contato</title>
+      <style>
+        .form-container {
+          max-width: 400px;
+          margin: 0 auto;
+        }
+        
+        .form-group {
+          margin-bottom: 15px;
+        }
+        
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+        
+        input[type="text"], select {
+          width: 100%;
+          padding: 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+        }
+        
+        input[type="submit"] {
+          padding: 10px 15px;
+          background-color: #4CAF50;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+        
+        .error {
+          color: red;
+          font-size: 14px;
+          margin-top: 5px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="form-container">
+        <h2>Entre em Contato</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <select id="name" name="name" required>
+              <option value="">Selecione</option>
+              <option value="Roberto">Roberto</option>
+              <option value="Márcia">Márcia</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="age">Idade:</label>
+            <select id="age" name="age" required>
+              <option value="">Selecione</option>
+              <option value="18-25">18-25</option>
+              <option value="26-35">26-35</option>
+              <option value="36-45">36-45</option>
+              <option value="46+">46+</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="region">Região:</label>
+            <select id="region" name="region" required>
+              <option value="">Selecione</option>
+              <option value="North">Norte</option>
+              <option value="South">Sul</option>
+              <option value="East">Leste</option>
+              <option value="West">Oeste</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="payment">Forma de Pagamento:</label>
+            <select id="payment" name="payment" required>
+              <option value="">Selecione</option>
+              <option value="Cartão de Crédito">Cartão de Crédito</option>
+              <option value="Cartão de Débito">Cartão de Débito</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <input type="image" name="tEnviar"src="img/enviar.jpg"/>
+            <input type="submit" value="Enviar">
+        </form>
+          </div>
+        </form>
+      </div>
+    
+      <script>
+        const form = document.getElementById('contact-form');
+        
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          if (validateForm()) {
+            // Aqui você pode realizar o envio do formulário para o servidor
+            // ou realizar outras ações necessárias
+            alert('Formulário válido. Enviando...');
+          }
+        });
+        
+        function validateForm() {
+          let valid = true;
+          const name = document.getElementById('name');
+          const age = document.getElementById('age');
+          const region = document.getElementById('region');
+          const payment = document.getElementById('payment');
+          const errorElement = document.getElementById('error-message');
+          
+          errorElement.innerHTML = '';
+          
+          if (name.value === '') {
+            showError('Por favor, selecione um Nome');
+            valid = false;
+          }
+          
+          if (age.value === '') {
+            showError('Por favor, selecione uma Idade');
+            valid = false;
+          }
+          
+          if (region.value === '') {
+            showError('Por favor, selecione uma Região');
+            valid = false;
+          }
+          
+          if (payment.value === '') {
+            showError('Por favor, selecione uma Forma de Pagamento');
+            valid = false;
+          }
+          
+          return valid;
+        }
+        
+        function showError(errorMessage) {
+          const errorElement = document.getElementById('error-message');
+          errorElement.innerHTML = errorMessage;
+        }
+      </script>
+
+      
+    <footer id="rodape">
+        <p>Copyright &copy; 2023 - by Vinícius Miquelotti </p>
+        </footer>
+    </div>  
+</body>
+</html>  
+</body>
+</html>

@@ -1,0 +1,32 @@
+.testimonial {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: jumpEffect 1s infinite alternate;
+  }
+  
+  .testimonial-description {
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  @keyframes jumpEffect {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  
+  
